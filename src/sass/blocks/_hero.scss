@@ -1,0 +1,143 @@
+.hero {
+    padding-top: 132px;
+    background: url('../../img/bg/main.jpg') center / cover no-repeat;
+    background-color: #303030;
+    max-height: 800px;
+    background-position: bottom;
+    z-index: 3;
+    &__service {
+        background: url('../../img/bg/main.png') center / cover no-repeat;
+        max-height: 600px;
+        background-position: bottom;
+    }
+    &__action {
+        max-height: 700px;
+    }
+    &__blog {
+        min-height: 600px;
+        background-position: bottom;
+    }
+    &__line {
+        width: 100px;
+        height: 1px;
+        background: #FFF;
+        margin: 0 auto;
+    }
+    &__message {
+/*         position: absolute;
+        bottom: -150px;
+        left: 50%;
+        transform: translateX(-50%); */
+        
+        display: block;
+        border-radius: 40px;
+        margin: 0 auto;
+        margin-top: 420px;
+        padding: 60px 100px;
+        width: 900px;
+        background: #FF8A00;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        background-image: url('../../img/pattern.png');
+        &-service {
+            margin-top: 100px;
+            background: #303030;
+            background-image: none;
+        }
+        &-action {
+            margin-top: 250px;
+        }
+    }
+    &__logo {
+        margin: 0 auto;
+        width: 240px;
+        height: 50px;
+        &-img {
+            width: 240px;
+            height: 50px;
+        }
+    }
+    &__btn {
+        margin-top: 10px !important;
+        width: 200px !important;
+    }
+}
+@media (max-width: 992px) {
+    .hero {
+        &__message {
+            margin-top: 300px;
+            width: 90%;
+            &-service {
+                height: 420px;
+            }
+            &-birth {
+                margin-top: 200px;
+                height: auto;
+            }
+            &-action {
+                margin-top: 180px;
+                height: auto;
+            }
+        }
+        
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        &__message {
+            margin-top: 220px;
+            width: 90%;
+            padding: 30px 10px;
+            &-service {
+                margin-top: 200px;
+            }
+            &-birth {
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        &__title {
+            display: none;
+        }
+        &__line {
+            display: none;
+        }
+        &__subtitle {
+            display: none;
+        }
+        &__message {
+            width: 90%;
+            margin-top: 500px;
+            font-size: 16px;
+            &-service {
+                height: 380px;
+                margin-top: 170px;
+            }
+            &-birth {
+                margin-top: 240px;  
+                height: auto;
+            }
+            &-action {
+                margin-top: 250px;
+                height: auto;
+            }
+        }
+        &__service {
+            .hero__title {
+                display: block;
+                font-size: 22px;
+            }
+        }
+        &__blog {
+            .hero__title {
+                display: block;
+                font-size: 22px;
+            }
+        }
+    }
+}

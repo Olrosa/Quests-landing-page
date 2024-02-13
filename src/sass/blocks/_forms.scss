@@ -1,0 +1,87 @@
+input, textarea {
+    color: #303030;
+    font-family: Comfortaa;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.form {
+    &__reviews {
+        &-title {
+            color: #FF8A00;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &-input {
+            position: relative;
+            width: 100%;
+            padding: 15px;
+            padding-left: 35px;
+            border-radius: 40px;
+            border: 1px solid #909090;
+            background: #FFF;
+            z-index: 1;
+        }
+        &-area {
+            width: 100%;
+            min-height: 200px;
+            padding: 15px;
+            padding-left: 35px;
+            border-radius: 40px;
+            border: 1px solid #909090;
+            background: #FFF;
+        }
+        &-btn {
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+    }
+    &__ps {
+        width: 400px;
+        color: #404040;
+        font-size: 8px;
+        font-weight: 500;
+    }
+}
+
+.input-icon {
+    position: relative;
+    width: calc(33% - 30px);
+    &-100 {
+        position: relative;
+        width: 100%;
+    }
+    &-img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        z-index: 3;
+        &-long {
+            position: absolute;
+            top: 45px;
+            left: 10px;
+            z-index: 3;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .form {
+        &__reviews {
+            &-offer {
+                flex-direction: column;
+            }
+            &-btn {
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+    }
+    .input-icon {
+        width: 100%;
+    }
+}

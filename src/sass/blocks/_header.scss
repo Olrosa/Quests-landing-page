@@ -1,0 +1,149 @@
+.header {
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .2s all;
+    z-index: 3;
+    &_active {
+      background-color: #FF8A00;
+    }
+    &:hover {
+      background: #FF8A00;
+    }
+    &__logo {
+      &-img {
+        width: 345px;
+        object-fit: contain;
+      }
+    }
+    &__menu {
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+        align-items: center;
+    }
+    &__item {
+      &-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        transition: .2s all;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &--dropdown {
+        position: relative; // Используем относительное позиционирование для абсолютного позиционирования выпадающего меню
+        &:hover {
+          .header__dropdown {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    &__dropdown {
+      position: absolute;
+      top: 100%;
+      left: -100px;
+      background-color: #FF8A00; 
+      padding: 30px 50px;
+      padding-top: 50px;
+      width: 500px; 
+      display: none; 
+      border-radius: 0px 0px 50px 50px;
+      transition: .2s all;
+      .header__item-link {
+        text-transform: none;
+      }
+    }
+    &__mobile {
+        &-icon {
+            display: none;
+        }
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .header {
+       &__logo {
+            &-img {
+                width: 200px;
+            }
+       } 
+    }
+  }
+
+  @media (max-width: 992px) {
+    .header {
+        &__logo {
+            width: 100%;
+            &-img {
+                display: block;
+                width: 200px;
+                height: 40px;
+                margin: 0 auto;
+            }
+        }
+        &__item {
+            &-link {
+                font-size: 16px;
+            }
+        }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header {
+        .nav {
+            display: none;
+        }
+        &__mobile {
+            &-icon {
+                display: block;
+            }
+        }
+    }
+  }
+
+  @media (max-width: 568px) {
+    .header {
+        &__logo {
+            display: none;
+        }
+        &__menu {
+            background: #FF8A00;
+            flex-direction: column;
+        }
+        &--dropdown {
+            position: relative; // Используем относительное позиционирование для абсолютного позиционирования выпадающего меню
+            &:hover {
+              .header__dropdown {
+                display: none;
+                flex-direction: column;
+              }
+            }
+        }
+        &__dropdown {
+            display: none;
+            position: relative;
+          }
+    }
+    .header__dropdown {
+        display: none;
+      }
+    
+      .header__dropdown.show {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .header__item--dropdown:hover .header__dropdown {
+        display: none;
+      }
+  }

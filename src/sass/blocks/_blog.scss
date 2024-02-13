@@ -1,0 +1,53 @@
+.blog {
+    &__item {
+        width: calc(50% - 50px);
+        padding: 50px;
+    }
+    &__title {
+        color: #303030;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__descr {
+        color: #303030;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__more {
+        color:#FF8A00;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration-line: underline;
+    }
+    &__img {
+        height: 350px;
+        width: 100%;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 992px) {
+    .blog {
+        &__offer {
+            gap: 20px;
+        }
+        &__item {
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blog {
+        &__offer {
+            width: 100%;
+            gap: 20px;
+        }
+        &__item {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}

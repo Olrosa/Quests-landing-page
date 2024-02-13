@@ -1,0 +1,56 @@
+.sert {
+    &__offer {
+        margin-top: 40px;
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        transform: rotate(-9deg);
+        margin: 0 auto;
+        &-big {
+            display: block;
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+        &-block {
+            position: relative;
+            width: 160px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    }
+    &__descr {
+        color: #303030;
+        font-size: 20px;
+        font-weight: 500;
+        &-price {
+            margin-top: 40px;
+        }
+    }
+    &__price {
+        position: absolute;
+        bottom: -10px;
+        right: -20px;
+        font-family: Comfortaa;
+        color: #303030;
+        border-radius: 15px;
+        background:#FF8A00;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sert {
+        &__offer {
+            &-2 {
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.complex {
+    &__80 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__descr {
+        color: #303030;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__item {
+        width: calc(33% - 20px);
+        &-img {
+            display: block;
+            border-radius: 50px;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        &-title {
+            color:#FF8A00;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &-2 {
+            width: calc(50% - 20px);
+        }
+    }
+    &__btn {
+        margin: 0 auto;
+    }
+    &__cards {
+        width: 100%;
+    }
+    &__card {
+        padding: 60px 40px;
+        width: calc(33% - 20px);
+        border-radius: 50px;
+        background-color:  #FF8A00;
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+        min-height: 780px;
+        &-active {
+            padding: 90px 40px;
+            min-height: 870px;
+        }
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &-list {
+            list-style-type: none;
+        }
+        &-item {
+            font-size: 20px;
+            font-weight: 500;
+            &::before {
+                content: ''; /* Добавляем контент для псевдоэлемента */
+                display: inline-block; /* Делаем его блочным элементом */
+                width: 12px; /* Задаем ширину */
+                height: 12px; /* Задаем высоту */
+                background: #909090; /* Задаем цвет фона */
+                border-radius: 50%; /* Делаем круглым */
+                margin-right: 15px; /* Добавляем отступ между точкой и текстом */
+            }
+        }
+        &-descr {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        &-img {
+            display: block;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .complex {
+        &__card {
+            min-height: auto;
+            display: none;
+            &-active {
+                width: 400px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &__card {
+            &-img {
+                width: 280px;
+                height: 280px;
+                margin: 0 auto;
+            }
+            &-title {
+                margin-top: 40px;
+            }
+            &-list {
+                margin-top: 40px;
+                gap: 10px;
+            }
+            &-descr {
+                margin-top: 40px;
+            }
+           
+        }
+        &__btn {
+            margin-top: 40px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .complex {
+        &__items {
+            flex-direction: column;
+        }
+        &__item {
+            width: 100%;
+        }
+       
+    }
+}
+
+@media (max-width: 576px) {
+    .complex {
+        &__offer-2 {
+            flex-direction: column;
+        }
+        &__item-2 {
+            width: 100%;
+        } 
+        &__card {
+            width: 100%;
+        }
+    }   
+}

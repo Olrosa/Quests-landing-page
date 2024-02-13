@@ -1,0 +1,39 @@
+.company {
+    &__offer {
+        margin-top: 40px;
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        height: 350px;
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 50px;
+        &-big {
+            display: block;
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+    }
+    &__descr {
+        color: #303030;
+        font-size: 20px;
+        font-weight: 500;
+        &-price {
+            margin-top: 40px;
+        }
+    }
+    &__price {
+        position: absolute;
+        top: 80px;
+        left: 220px;
+        font-family: Comfortaa;
+        color: #303030;
+        border-radius: 15px;
+        background:#FF8A00;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}

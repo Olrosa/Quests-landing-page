@@ -128,4 +128,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Слайдер
+    if(window.innerWidth < 992) {
+        new Swiper('.services__slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                }
+            },
+            pagination: {
+                el: '.slider__points',
+                type: 'bullets', 
+                renderBullet: function (index, className) {
+                  return '<span class="' + className + '"></span>';
+                },
+                clickable: true,
+                bulletClass: 'slider__point',
+                bulletActiveClass: 'slider__point_active'
+            },
+        });
+    }
+    new Swiper('.complex__slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            slideShadows: false,
+            stretch: 20,
+          },
+    });
+
 });

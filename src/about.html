@@ -12,10 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1a7c8b9c-79ab-42ff-ab0a-7918af8b3fac&lang=ru_RU" type="text/javascript"></script>
-
+    <script src="js/swiper-bundle.min.js"></script>
     <style>
         .header {
             background: #FF8A00;
@@ -130,46 +130,59 @@
             <h2 class="services__title h2-title tac">
                 К вашим услугам
             </h2>
-            <div class="flex-offer mt-20 gap-30">
-                <div class="services__item flex-offer-col gap-20 jus-con-sb">
-                    <img src="img/9tec.png" class="services__img">
-                    <p class="services__descr">
-                        9 технологичных квестов, сюжеты с мировым именем
-                    </p>
-                    <button class="btn services__btn">
-                        <img src="icons/min.svg">
-                        Написать
-                    </button>
+            <div class="services__slider slider">
+                <div class="swiper-wrapper flex-offer mt-20">
+                    <div class="swiper-slide services__item">
+                        <div class="flex-offer-col gap-20 jus-con-sb services__part">
+                            <img src="img/9tec.png" class="services__img">
+                            <p class="services__descr">
+                                9 технологичных квестов, сюжеты с мировым именем
+                            </p>
+                            <button class="btn services__btn">
+                                <img src="icons/min.svg">
+                                Написать
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide services__item">
+                        <div class="flex-offer-col gap-20 jus-con-sb services__part">
+                            <img src="img/9tec.png" class="services__img">
+                            <p class="services__descr">
+                                Прятки в территории темноты
+                            </p>
+                            <button class="btn services__btn">
+                                <img src="icons/min.svg">
+                                Написать
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide services__item">
+                        <div class="flex-offer-col gap-20 jus-con-sb services__part">
+                            <img src="img/9tec.png" class="services__img">
+                            <p class="services__descr">
+                                Увлекательный кибертаг
+                            </p>
+                            <button class="btn services__btn">
+                                <img src="icons/min.svg">
+                                Написать
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide services__item">
+                        <div class="flex-offer-col gap-20 jus-con-sb services__part">
+                            <img src="img/9tec.png" class="services__img">
+                            <p class="services__descr">
+                                Комнаты для торжеств
+                            </p>
+                            <button class="btn services__btn">
+                                <img src="icons/min.svg">
+                                Написать
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="services__item flex-offer-col gap-20 jus-con-sb">
-                    <img src="img/9tec.png" class="services__img">
-                    <p class="services__descr">
-                        Прятки в территории темноты
-                    </p>
-                    <button class="btn services__btn">
-                        <img src="icons/min.svg">
-                        Написать
-                    </button>
-                </div>
-                <div class="services__item flex-offer-col gap-20 jus-con-sb">
-                    <img src="img/9tec.png" class="services__img">
-                    <p class="services__descr">
-                        Увлекательный кибертаг
-                    </p>
-                    <button class="btn services__btn">
-                        <img src="icons/min.svg">
-                        Написать
-                    </button>
-                </div>
-                <div class="services__item flex-offer-col gap-20 jus-con-sb">
-                    <img src="img/9tec.png" class="services__img">
-                    <p class="services__descr">
-                        Комнаты для торжеств
-                    </p>
-                    <button class="btn services__btn">
-                        <img src="icons/min.svg">
-                        Написать
-                    </button>
+                <div class="slider__points mt-20">
+                    
                 </div>
             </div>
         </div>

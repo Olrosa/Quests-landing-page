@@ -106,12 +106,16 @@
         }
     }
     .service-poster__slider {
+        .swiper-wrapper {
+            flex-direction: row;
+            padding: 0;
+        }
         .swiper-slide {
             max-width: none;   
     
         }
         .service__poster-mini-2 {
-            width: 100%;
+            object-fit: cover;
         }
     }
 }

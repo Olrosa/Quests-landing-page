@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Слайдер
-    if(window.innerWidth < 992) {
+    if(window.innerWidth <= 992) {
         new Swiper('.services__slider', {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -155,17 +155,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 bulletActiveClass: 'slider__point_active'
             },
         });
+        new Swiper('.complex__slider', {
+            slidesPerView: 1,
+            
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    
+                }
+            },
+            pagination: {
+                el: '.slider__points',
+                type: 'bullets', 
+                renderBullet: function (index, className) {
+                  return '<span class="' + className + '"></span>';
+                },
+                clickable: true,
+                bulletClass: 'slider__point',
+                bulletActiveClass: 'slider__point_active'
+            },
+            
+            
+        });
     }
-    new Swiper('.complex__slider', {
-        slidesPerView: 3,
+
+    new Swiper('.service-poster__slider', {
+        slidesPerView: 1,
         spaceBetween: 20,
-        loop: true,
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 0,
-            slideShadows: false,
-            stretch: 20,
-          },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            }
+        },
+        pagination: {
+            el: '.slider__points',
+            type: 'bullets', 
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"></span>';
+            },
+            clickable: true,
+            bulletClass: 'slider__point',
+            bulletActiveClass: 'slider__point_active'
+        },    
     });
 
 });

@@ -47,6 +47,22 @@
             color:#FF8A00;
         }
     }
+    
+}
+.service-poster__slider {
+    .swiper-wrapper {
+        padding: 0 20px;
+        flex-wrap: nowrap;
+        gap: 0;
+        width: 100%;
+    }
+    .swiper-slide {
+        max-width: 400px;   
+
+    }
+    .service__poster-mini-2 {
+        width: 100%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -87,6 +103,15 @@
                 width: 100%;
                 height: 200px;
             }
+        }
+    }
+    .service-poster__slider {
+        .swiper-slide {
+            max-width: none;   
+    
+        }
+        .service__poster-mini-2 {
+            width: 100%;
         }
     }
 }
